@@ -27,7 +27,7 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// every time player hits enemy,enemies also get reset.
+// every time player hits enemy,enemies also get reset
 Enemy.prototype.reset = function() {
     this.x = 20;
     this.y = this.y;
@@ -70,7 +70,7 @@ Player.prototype.update = function() {
 // Every time reaching the water player gets a 'chance' in addition.
 // After every win player gets back to the given position.
 Player.prototype.win = function() {
-    if (this.y < 30 ) {
+    if (this.y < 30) {
         this.y = 420;
         this.x = 200;
         chance++;
@@ -78,7 +78,7 @@ Player.prototype.win = function() {
 };
 
 // Draw the player on the screen, required method for game.
-// Draw the chance on the screen.
+// Draw the chance on the screen. 
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     ctx.font = "20pt Impact";
@@ -86,7 +86,7 @@ Player.prototype.render = function() {
     ctx.fillText("chance : " + chance, 60, 90);
 };
 
-// when a player hits the enemy, the game resets.
+// when a player hits the enemy, the game resets. 
 Player.prototype.reset = function() {
     this.x = 200;
     this.y = 420;
